@@ -1,5 +1,5 @@
 {
-  "name": "headless-kizunacoin",
+  "name": "kizunacoin-headless",
   "description": "Kizunacoin headless wallet",
   "author": "Kizunacoin",
   "version": "0.1.9",
@@ -12,11 +12,11 @@
   ],
   "license": "MIT",
   "repository": {
-    "url": "git://github.com/KIZUNACOIN/headless-kizunacoin.git",
+    "url": "git://github.com/KIZUNACOIN/kizunacoin-headless.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/KIZUNACOIN/headless-kizunacoin/issues"
+    "url": "https://github.com/KIZUNACOIN/kizunacoin-headless/issues"
   },
   "browser": {
     "request": "browser-request",
