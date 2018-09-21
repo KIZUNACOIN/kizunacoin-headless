@@ -37,8 +37,6 @@ You can remotely control your wallet via chat interface from devices listed in `
 * `address`: to get to know one of the wallet's addresses, you use it to refill the wallet's balance;
 * `pay <amount in bytes>` to request withdrawal from the headless wallet to your `payout_address`, or `pay <amount> <asset>` to withdraw another asset.
 
-![Chat with headless wallet](chat-with-headless.png)
-
 ## Differences from GUI wallet
 
 * Headless wallet (as software) can have only one wallet (as storage of funds) AKA account, its BIP44 derivation path is `m/44'/0'/0'`.  In GUI wallet (as software) you can create multiple wallets (as storage of funds).
