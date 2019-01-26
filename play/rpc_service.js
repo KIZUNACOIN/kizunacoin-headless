@@ -36,6 +36,9 @@ function initRPC() {
 		}
 	});
 
+    server.on('connection', function(sock){
+        console.log(sock.remoteAddress);
+    })
 	/**
 	 * Returns information about the current state.
 	 * @return { last_mci: {Integer}, last_stable_mci: {Integer}, count_unhandled: {Integer} }
@@ -81,6 +84,18 @@ function initRPC() {
 			});
 		});
 	});
+
+    /**
+     * Get wallet addresses.
+     * @return {String} addresses
+     */
+    server.expose('getalladdresses', function(args, opt, cb) {
+        let start_time = Date.now();
+        walletDefinedByKeys.readAllAddresses(wallet_id, function(result) {
+            console.log('getalladdresses took '+(Date.now()-start_time)+'ms');
+            cb(null, result);
+        });
+    });
 
 	/**
 	 * Returns address balance(stable and pending).
